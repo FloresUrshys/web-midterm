@@ -19,5 +19,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('stats',[PassengerStatController::class,'index']);
+Route::post('login',[PassengerStatController::class,'login']);
+Route::post('register',[PassengerStatController::class,'register']);
+Route::post('reset-password',[PassengerStatController::class,'resetPassword']);
 

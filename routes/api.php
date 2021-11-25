@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\API\PassengerStatController;
+use App\Http\Controllers\API\PassengerStatPostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,3 +24,8 @@ Route::post('login',[PassengerStatController::class,'login']);
 Route::post('register',[PassengerStatController::class,'register']);
 Route::post('reset-password',[PassengerStatController::class,'resetPassword']);
 
+
+
+Route::get('get-all-posts',[PassengerStatPostController::class,'getAllPosts']);
+Route::get('get-post',[PassengerStatPostController::class,'getPost']);
+Route::get('search-post',[PassengerStatPostController::class,'searchPost']);
